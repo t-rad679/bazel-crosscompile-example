@@ -1,0 +1,5 @@
+#!/bin/bash --norc
+
+
+exec -a x86_64-unknown-linux-gnu-ar \
+    external/cross_toolchain/bin/x86_64-unknown-linux-gnu-ar "$@"

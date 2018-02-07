@@ -1,0 +1,65 @@
+major_version: "0"
+minor_version: "1"
+default_target_cpu: "docker"
+
+toolchain {
+    toolchain_identifier: "docker_toolchain"
+    host_system_name: "darwin"
+    target_system_name: "docker-unknown-linux-gnu"
+    target_cpu: "docker"
+    target_libc: "unknown"
+    compiler: "gcc"
+    abi_version: "gcc"
+    abi_libc_version: "unknown"
+
+    tool_path {
+        name: "gcc"
+        path: "x86_64-linux-gcc/x86_64-unknown-linux-gnu-gcc"
+    }
+    tool_path {
+        name: "ld"
+        path: "x86_64-linux-gcc/x86_64-unknown-linux-gnu-ld"
+    }
+    tool_path {
+        name: "ar"
+        path: "x86_64-linux-gcc/x86_64-unknown-linux-gnu-ar"
+    }
+    tool_path {
+        name: "cpp"
+        path: "x86_64-linux-gcc/x86_64-unknown-linux-gnu-cpp"
+    }
+    tool_path {
+        name: "gcov",
+        path: "x86_64-linux-gcc/x86_64-unknown-linux-gnu-gcov",
+    }
+    tool_path {
+        name: "nm"
+        path: "x86_64-linux-gcc/x86_64-unknown-linux-gnu-nm",
+    }
+    tool_path {
+        name: "objdump"
+        path: "x86_64-linux-gcc/x86_64-unknown-linux-gnu-objdump",
+    }
+    tool_path {
+        name: "strip"
+        path: "x86_64-linux-gcc/x86_64-unknown-linux-gnu-strip",
+    }
+
+    # compiler_flag: "-target"
+    # compiler_flag: "x86_64-unknown-linux-gnu"
+    # compiler_flag: "-isystem"
+    # cxx_builtin_include_directory: "/usr/lib/gcc/"
+    # cxx_builtin_include_directory: "/usr/local/include"
+    # cxx_builtin_include_directory: "/usr/include"
+    # cxx_builtin_include_directory: "%package(@cross_toolchain//x86_64-unknown-linux-gnu/sysroot/usr/include)%"
+    cxx_builtin_include_directory: "%package(@cross_toolchain//lib/gcc/x86_64-unknown-linux-gnu/7.3.0/include)%"
+    # cxx_builtin_include_directory: "/private/var/tmp/_bazel_ilya/d86e0e7cfe53385dc3edff3c0d9662b6/external/cross_toolchain/lib/gcc/x86_64-unknown-linux-gnu/7.3.0/include"
+    # cxx_builtin_include_directory: "%sysroot%/../../lib/gcc/x86_64-unknown-linux-gnu/7.3.0/include"    
+    # linker_flag: "--sysroot=external/cross_toolchain/x86_64-unknown-linux-gnu/sysroot/"
+    builtin_sysroot: "external/cross_toolchain/x86_64-unknown-linux-gnu/sysroot/"
+}
+
+default_toolchain {
+    cpu: "docker"
+    toolchain_identifier: "docker_toolchain"
+}
