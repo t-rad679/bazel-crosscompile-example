@@ -47,7 +47,8 @@ toolchain {
 
     # compiler_flag: "-target"
     # compiler_flag: "x86_64-unknown-linux-gnu"
-    # compiler_flag: "-isystem"
+    compiler_flag: "-no-canonical-prefixes"
+    compiler_flag: "-fno-canonical-system-headers"
     # cxx_builtin_include_directory: "/usr/lib/gcc/"
     # cxx_builtin_include_directory: "/usr/local/include"
     # cxx_builtin_include_directory: "/usr/include"
