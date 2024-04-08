@@ -1,0 +1,86 @@
+package(default_visibility = ["//visibility:public"])
+
+
+filegroup(
+    name = "srcs", 
+    srcs = glob(["**"]),
+)
+
+filegroup(
+    name = "gcc",
+    srcs = [
+        "aarch64_be-none-linux-gnu-gcc",
+        "@cross_toolchain//:gcc",
+    ],
+)
+
+filegroup(
+    name = "ar",
+    srcs = [
+        "aarch64_be-none-linux-gnu-ar",
+        "@cross_toolchain//:ar",
+    ],
+)
+
+filegroup(
+    name = "ld",
+    srcs = [
+        "aarch64_be-none-linux-gnu-ld",
+        "@cross_toolchain//:ld",
+    ],
+)
+
+filegroup(
+    name = "nm",
+    srcs = [
+        "aarch64_be-none-linux-gnu-nm",
+        "@cross_toolchain//:nm",
+    ],
+)
+
+filegroup(
+    name = "objcopy",
+    srcs = [
+        "aarch64_be-none-linux-gnu-objcopy",
+        "@cross_toolchain//:objcopy",
+    ],
+)
+
+filegroup(
+    name = "objdump",
+    srcs = [
+        "aarch64_be-none-linux-gnu-objdump",
+        "@cross_toolchain//:objdump",
+    ],
+)
+
+filegroup(
+    name = "strip",
+    srcs = [
+        "aarch64_be-none-linux-gnu-strip",
+        "@cross_toolchain//:strip",
+    ],
+)
+
+filegroup(
+    name = "as",
+    srcs = [
+        "aarch64_be-none-linux-gnu-as",
+        "@cross_toolchain//:as",
+    ],
+)
+
+filegroup(
+    name = "tool-wrappers",
+    srcs = [
+        ":ar",
+        ":as",
+        ":gcc",
+        ":ld",
+        ":nm",
+        ":objcopy",
+        ":objdump",
+        ":strip",
+    ],
+)
+
