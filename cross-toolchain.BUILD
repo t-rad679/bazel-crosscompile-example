@@ -8,56 +8,56 @@ filegroup(
 filegroup(
     name = 'gcc',
     srcs = [
-        'bin/x86_64-unknown-linux-gnu-gcc',
+        'bin/aarch64_be-none-linux-gnu-gcc',
     ],
 )
 
 filegroup(
     name = 'ar',
     srcs = [
-        'bin/x86_64-unknown-linux-gnu-ar',
+        'bin/aarch64_be-none-linux-gnu-ar',
     ],
 )
 
 filegroup(
     name = 'ld',
     srcs = [
-        'bin/x86_64-unknown-linux-gnu-ld',
+        'bin/aarch64_be-none-linux-gnu-ld',
     ],
 )
 
 filegroup(
     name = 'nm',
     srcs = [
-        'bin/x86_64-unknown-linux-gnu-nm',
+        'bin/aarch64_be-none-linux-gnu-nm',
     ],
 )
 
 filegroup(
     name = 'objcopy',
     srcs = [
-        'bin/x86_64-unknown-linux-gnu-objcopy',
+        'bin/aarch64_be-none-linux-gnu-objcopy',
     ],
 )
 
 filegroup(
     name = 'objdump',
     srcs = [
-        'bin/x86_64-unknown-linux-gnu-objdump',
+        'bin/aarch64_be-none-linux-gnu-objdump',
     ],
 )
 
 filegroup(
     name = 'strip',
     srcs = [
-        'bin/x86_64-unknown-linux-gnu-strip',
+        'bin/aarch64_be-none-linux-gnu-strip',
     ],
 )
 
 filegroup(
     name = 'as',
     srcs = [
-        'bin/x86_64-unknown-linux-gnu-as',
+        'bin/aarch64_be-none-linux-gnu-as',
     ],
 )
 
@@ -78,7 +78,7 @@ filegroup(
 filegroup(
     name = 'compiler_pieces',
     srcs = glob([
-        'x86_64-unknown-linux-gnu/**',
+        'aarch64_be-none-linux-gnu/**',
         'lib/**',
     ]),
 )
